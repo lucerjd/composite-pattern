@@ -7,7 +7,7 @@ import java.util.List;
  * Created by jlucero on 7/12/17.
  */
 public class Composite implements Component {
-    List children = new ArrayList<Component>();
+    private List children = new ArrayList<Component>();
 
     public void add(Component component) {
         children.add(component);
