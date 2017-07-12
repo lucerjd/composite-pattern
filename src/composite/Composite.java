@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by jlucero on 7/12/17.
  */
-public class Composite {
+public class Composite implements Component {
     List children = new ArrayList<Component>();
 
     public void add(Component component) {
@@ -19,7 +19,7 @@ public class Composite {
 
     public Component get(int index) {
         if (index < children.size()) {
-            return children.get(index);
+            return (Composite) children.get(index);
         }
         return null;
     }
